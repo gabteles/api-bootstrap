@@ -1,6 +1,6 @@
 module App::Entities
   class User < BaseEntity
-    attribute :uuid, Types::Strict::String
+    attribute :uuid, Types::UUIDv4
     attribute :name, Types::String
   end
 end
