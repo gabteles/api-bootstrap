@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+ruby '2.3.3'
+
+gem 'puma'
+gem 'shotgun'
+gem 'byebug'
+gem 'hanami-router'
+gem 'hanami-controller'
+gem 'dry-auto_inject'
+gem 'json'

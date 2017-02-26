@@ -1,0 +1,16 @@
+version: '2'
+services:
+  db:
+    image: mongo
+  web:
+    build: .
+    stdin_open: true
+    command: bash
+    volumes:
+      - .:/app
+    ports:
+      - "9393:9393"
+    links:
+      - db
+    depends_on:
+      - db
