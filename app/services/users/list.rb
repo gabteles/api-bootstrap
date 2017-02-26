@@ -1,12 +1,7 @@
-module App::Services::Users
-  class List
-    HARDCODED_SAMPLE_USER_LIST = [
-      { id: 1, name: 'John'},
-      { id: 2, name: 'Jane'},
-    ]
+class App::Services::Users::List
+  include App::Dependencies[userRespository: 'repositories.user']
 
-    def execute
-      return HARDCODED_SAMPLE_USER_LIST
-    end
+  def execute
+    userRespository.all
   end
 end

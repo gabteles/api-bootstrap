@@ -5,6 +5,10 @@ module App
         register(:list) { App::Services::Users::List.new }
       end
     end
+
+    container.namespace(:repositories) do
+      register(:user) { App::Repositories::HardcodedUserRepository.new }
+    end
   end
 
   Dependencies = Dry::AutoInject(dependenciesContainer)
