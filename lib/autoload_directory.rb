@@ -1,4 +1,3 @@
-#
 class Module
   BASENAME_WITHOUT_EXTENSION = lambda do |filename|
     File.basename(filename, File.extname(filename))
