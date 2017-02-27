@@ -5,13 +5,13 @@ Bundler.require
 
 # Business Core
 
-Dir['lib/**/*.rb'].each {|file| require_relative("./#{file}") }
+Dir['lib/**/*.rb'].each { |file| require_relative("./#{file}") }
 
 module App
   autoload_directories(false, 'app')
 end
 
-Dir['initializer/**/*.rb'].each {|file| require_relative("./#{file}") }
+Dir['initializer/**/*.rb'].each { |file| require_relative("./#{file}") }
 
 # Exposures
 
