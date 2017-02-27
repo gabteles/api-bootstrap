@@ -2,7 +2,7 @@ module API
   module Controllers
     module Users
       class Index
-        include Hanami::Action
+        include Controllers::BaseController
         include App::Dependencies[userList: 'services.users.list']
 
         def call(_)
