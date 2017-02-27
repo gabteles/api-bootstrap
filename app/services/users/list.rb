@@ -2,10 +2,10 @@ module App
   module Services
     module Users
       class List
-        include App::Dependencies[userRespository: 'repositories.user']
+        include App::Dependencies[user_repository: 'repositories.user']
 
         def execute
-          userRespository.all
+          user_repository.all
         end
       end
     end
