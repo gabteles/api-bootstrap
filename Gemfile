@@ -9,6 +9,7 @@ gem 'hanami-controller'
 gem 'hanami-router'
 gem 'puma'
 gem 'shotgun'
+gem 'jwt'
 
 group :development do
   gem 'rubocop', require: false
