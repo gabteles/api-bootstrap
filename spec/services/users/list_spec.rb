@@ -1,7 +1,7 @@
 RSpec.describe App::Services::Users::List do
   subject(:service) { App::Services::Users::List.new(dependencies).execute }
 
-  let(:repository_results) { [ App::Entities::User.new(uuid: SecureRandom.uuid, name: 'john') ] }
+  let(:repository_results) { [App::Entities::User.new(uuid: SecureRandom.uuid, name: 'john')] }
   let(:user_repository) { UserRepositoryMock.new(repository_results) }
   let(:dependencies) { { user_repository: user_repository } }
 

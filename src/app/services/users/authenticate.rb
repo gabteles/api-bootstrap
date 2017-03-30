@@ -2,7 +2,7 @@ module App
   module Services
     module Users
       class Authenticate
-        def execute(auth_params)
+        def execute(_auth_params)
           # TODO
           ServiceResponse.new(data: 1)
         end

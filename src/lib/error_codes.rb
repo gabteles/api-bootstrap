@@ -1,3 +1,3 @@
 module ErrorCodes
-  None = 0.freeze
+  NONE = 0
 end

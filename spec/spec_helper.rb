@@ -11,12 +11,12 @@ SimpleCov.start do
   filters.clear
 
   add_filter do |src|
-    !(src.filename =~ /^#{SimpleCov.root}\/(app|api|lib)/)
+    !(src.filename =~ /^#{SimpleCov.root}\/src\/(app|api|lib)/)
   end
 
-  add_group 'Application', File.join(SimpleCov.root, 'app')
-  add_group 'API', File.join(SimpleCov.root, 'api')
-  add_group 'Libraries', File.join(SimpleCov.root, 'lib')
+  add_group 'Application', File.join(SimpleCov.root, 'src/app')
+  add_group 'API', File.join(SimpleCov.root, 'src/api')
+  add_group 'Libraries', File.join(SimpleCov.root, 'src/lib')
 end
 
 # Loads application
@@ -25,13 +25,13 @@ require_relative '../main.rb'
 
 # Force all files to be eager loaded
 
-Dir['{api,app,lib}/**/*.rb'].each do |file|
+Dir['src/{api,app,lib}/**/*.rb'].each do |file|
   require_relative("../#{file}")
 end
 
 # Spec helpers
 
-Dir['spec/helpers/**/*.rb'].each { |file|
+Dir['spec/helpers/**/*.rb'].each do |file|
   relative_file = file.sub('spec/', '')
   require_relative(relative_file)
-}
+end

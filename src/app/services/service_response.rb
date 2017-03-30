@@ -5,10 +5,10 @@ module App
 
       attribute :data, Types::Any
       attribute :errors, Types::Strict::Array.optional.default([])
-      attribute :code, Types::Coercible::Int.default(ErrorCodes::None)
+      attribute :code, Types::Coercible::Int.default(ErrorCodes::NONE)
 
       def success?
-        errors.empty? && code.eql?(ErrorCodes::None)
+        errors.empty? && code.eql?(ErrorCodes::NONE)
       end
     end
   end
