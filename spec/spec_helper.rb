@@ -20,14 +20,7 @@ SimpleCov.start do
 end
 
 # Loads application
-
-require_relative '../main.rb'
-
-# Force all files to be eager loaded
-
-Dir['src/{api,app,lib}/**/*.rb'].each do |file|
-  require_relative("../#{file}")
-end
+require_relative '../src/main.rb'
 
 # Spec helpers
 
