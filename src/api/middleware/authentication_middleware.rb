@@ -1,5 +1,5 @@
 module API
-  module Plugins
+  module Middleware
     class AuthenticationMiddleware
       HTTP_AUTHENTICATION_HEADER = 'HTTP_AUTHORIZATION'.freeze
       AUTHENTICATION_SERVICE = 'services.users.authenticate'.freeze
