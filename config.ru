@@ -1,2 +1,2 @@
-require './main.rb'
+require './src/main.rb'
 run API::Router

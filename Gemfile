@@ -10,6 +10,7 @@ gem 'hanami-router'
 gem 'puma'
 gem 'shotgun'
 gem 'jwt'
+gem 'activesupport', require: ['active_support/dependencies']
 
 group :development do
   gem 'rubocop', require: false
